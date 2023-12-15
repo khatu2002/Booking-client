@@ -3,7 +3,7 @@ import "./featured.css";
 import { Link } from "react-router-dom";
 
 const Featured = () => {
-  const { data, loading, error } = useFetch("http://localhost:8800/api/hotels/countByCity?cities=paris,marid,london");
+  const { data, loading, error } = useFetch("https://booking-project-new.onrender.com/api/hotels/countByCity?cities=paris,marid,london");
 
   return (
     <div className="featured">
