@@ -34,7 +34,7 @@ const Register = () => {
         dispatch({ type: "LOGIN_START" });
 
         try {
-            const res = await axios.post("${process.env.PATH}/api/auth/register", userData);
+            const res = await axios.post("http://localhost:8800/api/auth/register", userData);
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
             navigate("/login"); // Redirect to login after successful registration
         } catch (err) {

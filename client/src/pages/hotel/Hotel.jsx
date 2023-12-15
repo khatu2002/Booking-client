@@ -29,7 +29,7 @@ const Hotel = () => {
   const [openModal, setOpenModal] = useState(false);
 
   //const { data, loading, error } = useFetch(`/hotels/find/${id}`)
-  const { data, loading, error } = useFetch("${process.env.PATH}/api/hotels/find/${id}")
+  const { data, loading, error } = useFetch(`http://localhost:8800/api/hotels/find/${id}`)
   const { user } = useContext(AuthContext)
   const navigate = useNavigate()
   const { dates, options } = useContext(SearchContext);
